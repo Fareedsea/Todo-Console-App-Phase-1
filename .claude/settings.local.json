@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Json -Number 1 -ShortName \"console-todo-app\" -FeatureDescription \"Create Phase-1 specifications for an in-memory Python console Todo app.\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Json -Number 1 -ShortName \"console-todo-app\" \"Create Phase-1 specifications for an in-memory Python console Todo app.\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Number 1 -ShortName \"console-todo-app\" \"Create Phase-1 specifications for an in-memory Python console Todo app.\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/setup-plan.ps1\" -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/update-agent-context.ps1\" -AgentType claude)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(python src/lib/main.py)",
+      "Bash(python -m src.lib.main)",
+      "Bash(python lib/main.py)",
+      "Bash(echo.)",
+      "Bash(powershell -Command \"Set-Content -Path ''src/__init__.py'' -Value ''# This file makes src a Python package''\")",
+      "Bash(powershell -Command \"Set-Content -Path ''src/models/__init__.py'' -Value ''# This file makes models a Python package''\")",
+      "Bash(powershell -Command \"Set-Content -Path ''src/services/__init__.py'' -Value ''# This file makes services a Python package''\")",
+      "Bash(powershell -Command \"Set-Content -Path ''src/lib/__init__.py'' -Value ''# This file makes lib a Python package''\")",
+      "Bash(powershell -Command \"Set-Content -Path ''src/cli/__init__.py'' -Value ''# This file makes cli a Python package''\")"
+    ]
+  }
+}
